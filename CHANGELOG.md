@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - Fixed Cross site scripting vulnerability in Javascript escaping.  This addresses CVE-2023-28447.
 
+### Added
+- PHP8.2 compatibility [#775](https://github.com/smarty-php/smarty/pull/775)
+
+### Changed
+- Include docs and demo in the releases [#799](https://github.com/smarty-php/smarty/issues/799)
+- Using PHP functions as modifiers now triggers a deprecation notice because we will drop support for this in the next major release [#813](https://github.com/smarty-php/smarty/issues/813)
+-  Dropped remaining references to removed PHP-support in Smarty 4 from docs, lexer and security class. [#816](https://github.com/smarty-php/smarty/issues/816)
+
 ### Fixed
 - Output buffer is now cleaned for internal PHP errors as well, not just for Exceptions [#514](https://github.com/smarty-php/smarty/issues/514)
 
@@ -22,8 +30,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixed use of `rand()` without a parameter in math function [#794](https://github.com/smarty-php/smarty/issues/794)
 - Fixed unselected year/month/day not working in html_select_date [#395](https://github.com/smarty-php/smarty/issues/395)
-- Updated requirement contraint for 'php' in composer.json to correctly reflect that Smarty3 does not support PHP8. Please upgrade to Smarty4 to use PHP8. 
- 
+- Updated requirement contraint for 'php' in composer.json to correctly reflect that Smarty3 does not support PHP8. Please upgrade to Smarty4 to use PHP8.
+
 ## [3.1.46] - 2022-08-01
 
 ### Fixed
@@ -599,7 +607,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - revert bugfix compiling {section} did create warning
   - bugfix {$smarty.section.customer.loop} did throw compiler error https://github.com/smarty-php/smarty/issues/161
     update of yesterdays fix
-  - bugfix string resource could inject code at {block} or inline subtemplates through PHP comments https://github.com/smarty-php/smarty/issues/157		
+  - bugfix string resource could inject code at {block} or inline subtemplates through PHP comments https://github.com/smarty-php/smarty/issues/157
   - bugfix output filters did not observe nocache code flhttps://github.com/smarty-php/smarty/issues/154g https://github.com/smarty-php/smarty/issues/160
   - bugfix {extends} with relative file path did not work https://github.com/smarty-php/smarty/issues/154
     https://github.com/smarty-php/smarty/issues/158
@@ -2259,7 +2267,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - bugfix  overloading problem when $smarty->fetch()/display() have been used in plugins
 				(introduced with 3.0.2)
 - code cleanup
-								
+
 ## Smarty 3.0.3  -
 
 13/11/2010

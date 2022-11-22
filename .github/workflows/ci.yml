@@ -28,14 +28,28 @@ jobs:
           - "5.3"
           - "5.4"
           - "5.5"
-          - "5.6"          
+          - "5.6"
           - "7.1"
           - "7.2"
           - "7.3"
           - "7.4"
+          - "8.0"
+          - "8.1"
+          - "8.2"
 
         compiler:
           - default
+
+        include:
+          - os: ubuntu-latest
+            php-version: "8.0"
+            compiler: jit
+          - os: ubuntu-latest
+            php-version: "8.1"
+            compiler: jit
+          - os: ubuntu-latest
+            php-version: "8.2"
+            compiler: jit
 
     steps:
     - name: Checkout

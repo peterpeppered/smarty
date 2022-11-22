@@ -427,6 +427,7 @@ class Security extends Smarty_Security
 {
 
 }
+#[AllowDynamicProperties]
 class ResourceStreamSecurity
 {
     private $position;
